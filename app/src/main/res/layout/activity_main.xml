@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel"
+    android:background="#FBF1C7"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/linear2"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/play_pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:typeface="monospace"
+            android:layout_weight="1"
+            android:background="#282828"
+            android:textColor="#D79921"
+            android:includeFontPadding="true"
+            android:text=">|"
+            android:textSize="24sp"
+
+             />
+
+        <TextView
+            android:id="@+id/station_name"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"
+            android:layout_width="170sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FBF1C7"
+            android:text="- - - -"
+            android:textColor="#282828"
+            android:textSize="24sp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            app:fontFamily="@font/press_start_2p"
+            android:gravity="end" />
+
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/simpleSearchView"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/linear2"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/quote_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/simpleSearchView"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:fontFamily="@font/courgette" />
+
+
+    <Button
+        android:id="@+id/random_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#CC241D"
+        android:text="r a s t g e l e"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:typeface="monospace" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrollv"
+        android:layout_below="@id/quote_text_view"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/llayout"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/stations_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="@android:color/black"
+        android:background="#116677"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
